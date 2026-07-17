@@ -21,8 +21,8 @@ import AdminAdmissions from './pages/admin/AdminAdmissions';
 import ProtectedRoute from './components/ProtectedRoute';
 import { HelmetProvider } from 'react-helmet-async';
 import ArticleDetail from './pages/ArticleDetail.jsx';
+import NotFound from './pages/NotFound';
 import './App.css';
-
 // Create a client
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -90,6 +90,9 @@ function App() {
                       <AdminAdmissions />
                     </ProtectedRoute>
                   } />
+                  
+                  {/* Catch-all Route for 404 Not Found */}
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
               <Footer />
