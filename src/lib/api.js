@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://itrat-backend.vercel.app/api';
+const API_BASE_URL = '/api';
 
 export const getImageUrl = (path) => {
   if (!path) return '';
   if (path.startsWith('http')) return path;
-  const serverRoot = API_BASE_URL.replace('/api', '');
+  const serverRoot = 'https://itrat-backend.vercel.app';
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   return `${serverRoot}${normalizedPath}`;
 };
