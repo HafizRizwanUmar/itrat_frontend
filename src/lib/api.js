@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://itrat-backend.vercel.app/api';
+const API_BASE_URL = 'https://backend.quranoitratacademy.com/api';
 
 export const getImageUrl = (path) => {
   if (!path) return '';
